@@ -1,8 +1,8 @@
-const dammyReducer = (state,action)=>{
-    switch(action.type){
-        default:
-            return 'hello world'
-    }
-}
+import {combineReducers} from 'redux';
+import jokesReducer from './jokesReducer'
 
-export default dammyReducer;
+const rootReducer = combineReducers({
+    jokes:jokesReducer
+});
+
+export default rootReducer;

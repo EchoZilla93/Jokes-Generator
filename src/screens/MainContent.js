@@ -15,7 +15,6 @@ const MainContent = () => {
             <CheckBoxSelectors />
             <Search/>
             <GetJokeBtn/>
-            <JokeCard/>
         </div>
     )
 }
