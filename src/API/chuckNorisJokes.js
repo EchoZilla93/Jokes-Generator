@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+const cors ='https://cors-anywhere.herokuapp.com/';
 export default axios.create({
-    baseURL:'https://api.chucknorris.io/jokes'
+     baseURL:`${cors}https://api.chucknorris.io/jokes`
 });

@@ -1,44 +1,34 @@
 import React,{useState} from 'react';
+import {useDispatch} from 'react-redux';
+
+import {getAnimalJoke,getCareerJoke,getCelebrityJoke,getDevJoke} from '../actions/index';
+
+
 
 const CategoriesBtns = () => {
+    const dispatch = useDispatch();
     const [btnClick,setBtnClick] = useState(false);
-/*
-    const onBtnClick = () => {
-        //const target = e.target;
-            return function(){
-                let btnStatus;
-                if(btnClick){
-                    return btnStatus = 'active'
-                }else if(!btnClick){
-                    return btnStatus = 'nonActive'
-                }
-                console.log(btnStatus);
-                return btnStatus;
-            }
-    }
 
-    let btnStatus;
-   if(btnClick){
-       return btnStatus = 'active'
-   }else if(!btnClick){
-       return btnStatus = 'nonActive'
-   }
-    */
+   //Btn Controllers:
+   const onAnimalClick = () => dispatch(getAnimalJoke());
+   const onCareerClick = () => dispatch(getCareerJoke());
+   const onCelebrityClick = () => dispatch(getCelebrityJoke());
+   const onDevClick = () => dispatch(getDevJoke());
 
     return(
         <span className="btnContainer">
             <button 
-            className={`btnContainer__btn  ${btnClick? 'active': 'nonActive'}`} 
-            onClick={()=> setBtnClick(!btnClick)}>animal</button>
+            className={`btnContainer__btn animal  ${btnClick? 'active': 'nonActive'}`} 
+            onClick={onAnimalClick}>animal</button>
+            <button 
+            className={`btnContainer__btn career ${btnClick? 'active': 'nonActive'}`} 
+            onClick={onCareerClick}>career</button>
             <button 
             className={`btnContainer__btn ${btnClick? 'active': 'nonActive'}`} 
-            onClick={()=> setBtnClick(!btnClick)}>career</button>
+            onClick={onCelebrityClick}>celebrity</button>
             <button 
             className={`btnContainer__btn ${btnClick? 'active': 'nonActive'}`} 
-            onClick={()=> setBtnClick(!btnClick)}>celebrity</button>
-            <button 
-            className={`btnContainer__btn ${btnClick? 'active': 'nonActive'}`} 
-            onClick={()=> setBtnClick(!btnClick)}>dev</button>
+            onClick={onDevClick}>dev</button>
         </span>
     );
 };
