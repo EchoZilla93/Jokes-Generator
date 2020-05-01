@@ -133,6 +133,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 $checkBoxColor: #ABABAB;
 $activeBtnColor:#F8F8F8;
 $idColor:#8EA7FF;
+$like:#FF6767;
 //Header styles:
 .header{
  @include flex-column();
@@ -248,11 +249,23 @@ $idColor:#8EA7FF;
   border-radius: 20px;
   margin: 40px 0 78px 0px;
   padding: 60px;
+  &__mainContent-likeBtn{
+    display: inline;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $like;
+    background: none;
+    font-size: 20px;
+    margin: 0 40px 0 520px;
+  }
   &__updatedate-category{
     font-size: 10px;
     color: $checkBoxColor;
     margin: 28px 0 0 0;
-    
+  }
+  &__categoryIdent{
+   
   }
 }
 
@@ -266,4 +279,41 @@ $idColor:#8EA7FF;
 .joke-body{
   margin-top: 5px;
   font-size: 18px;
+}
+
+.jokesCardInfoContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 29px;
+  &__itemTime{
+    font-size: 10px;
+    color: $checkBoxColor;
+  }
+  &__itemcategory{
+    background: #fff;
+    width: 107px;
+    height: 24px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top:7px;
+    color: black;
+    border-radius: 6px;
+  }
+}
+
+
+//FAVORITE WINDOW:
+.favorite{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-end;
+  width: 480px;
+  height: 800px;
+  background:$activeBtnColor ;
+
 }

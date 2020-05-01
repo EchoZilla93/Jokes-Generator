@@ -11,7 +11,9 @@ export default (state = INITIAL_STATE,action) => {
          case 'FETCH_CELEBRITY':
              return action.payload;
         case 'FETCH_DEV':
-            return action.payload;            
+            return action.payload;  
+        case 'FETCH_FREE':
+            return action.payload;              
         default:
             return state;   
     };

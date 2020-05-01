@@ -6,7 +6,7 @@ export const getRandomJoke = () =>
         dispatch({type:'FETCH_RANDOM',payload:response});
     };
 
-//CAtegories Action Creators
+//Categories Action Creators
 export const getAnimalJoke = () =>
             async dispatch =>{
             const response = await chuckNorisJokes.get('/random?category=animal');
@@ -30,4 +30,13 @@ export const getDevJoke = () =>
     const response = await chuckNorisJokes.get('/random?category=dev');
     dispatch({type:'FETCH_DEV',payload:response})
 };   
+
+//FreeText Action Creator
+
+export const getFreeTextJoke = () => 
+    async dispatch => {
+        const searchInput = document.querySelector('.randomChekboxcantainer__form-item').target.value;
+        const response = await chuckNorisJokes.get(`/search?query=${searchInput}`);
+        dispatch({type:'FETCH_FREE',payload:response})
+};
 

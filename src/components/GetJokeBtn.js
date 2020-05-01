@@ -17,7 +17,7 @@ const GetJokeBtn = () =>{
                         id={jokes.data.id}
                         joke={jokes.data.value}
                         update={jokes.data.updated_at}
-                        category={null}
+                        category={jokes.data.categories}
                     />}
         </div> 
     )
