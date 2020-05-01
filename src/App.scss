@@ -132,6 +132,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 //Variables:
 $checkBoxColor: #ABABAB;
 $activeBtnColor:#F8F8F8;
+$idColor:#8EA7FF;
 //Header styles:
 .header{
  @include flex-column();
@@ -242,9 +243,27 @@ $activeBtnColor:#F8F8F8;
 //Joke Card:
 
 .jokeCardContainer{
-  width: 680px;
+  max-width: 680px;
   background: $activeBtnColor;
   border-radius: 20px;
-  margin: 40px 0 78px 140px;
+  margin: 40px 0 78px 0px;
   padding: 60px;
+  &__updatedate-category{
+    font-size: 10px;
+    color: $checkBoxColor;
+    margin: 28px 0 0 0;
+    
+  }
+}
+
+.joke-ref a{
+  color: $idColor;
+  font-size: 10px;
+}
+.joke-ref{
+  color:$checkBoxColor
+}
+.joke-body{
+  margin-top: 5px;
+  font-size: 18px;
 }

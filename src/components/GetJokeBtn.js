@@ -23,4 +23,6 @@ const GetJokeBtn = () =>{
     )
 }
 
+//<i class="far fa-heart"></i>
+
 export default GetJokeBtn;
