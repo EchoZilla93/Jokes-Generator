@@ -1,0 +1,28 @@
+@mixin flex-columnHead(){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+  }
+
+.header{
+    @include flex-columnHead();
+    &__logo{
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 20px;
+      margin: 40px 0 78px 140px;
+    }
+    &__welcomesTxt{
+     margin: 40px 0 0 140px;
+    }
+    &__welcomesTxt-1stfloor{
+     font-weight: 700;
+     font-size: 32px;
+   }
+   &__welcomesTxt-2stfloor{
+     font-weight: 500;
+     font-size: 24px;
+       }
+   }

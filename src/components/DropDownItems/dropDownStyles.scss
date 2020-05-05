@@ -1,0 +1,160 @@
+//Animations:
+@-webkit-keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .bounceIn {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+  }
+  
+
+$secondaryColor: #ABABAB;
+$primaryColor:#F8F8F8;
+@mixin flex-row(){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+  }
+.btnContainer{
+    @include flex-row();
+    margin: 26px 0 26px -5px;
+    width: 380px;
+    height: 2px;
+    text-transform: uppercase;
+    &__btn{
+      border: 2px solid $primaryColor;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      width: 85px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $secondaryColor;
+      animation: bounceIn .5s;
+    }
+    
+  }
+  .btnContainer__btn:hover{
+    background: $primaryColor;
+    color: black;
+}
+  
+  .active{
+    background:$primaryColor;
+    color: black;
+  }
+  .nonActive{
+    color: $secondaryColor;
+    border: 2px solid $primaryColor;
+  }
+
+
+  //SearchInputField
+.searchInput{
+    margin-top: 20px;
+    &__field{
+      outline: none;
+      height: 42px;
+      min-width: 680px;
+      border-radius: 10px;
+      border: solid 2px black;
+      font-size: 16px;
+      animation: bounceIn .8s;
+  
+    }
+    &__field::placeholder{
+      color: $secondaryColor;
+      padding-left: 15px;
+    }
+  }

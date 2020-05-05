@@ -1,0 +1,62 @@
+$idColor:#8EA7FF;
+$like:#FF6767;
+$secondaryColor: #ABABAB;
+$primaryColor:#F8F8F8;
+
+.jokeCardContainer{
+    max-width: 680px;
+    background: $primaryColor;
+    border-radius: 20px;
+    margin: 40px 0 78px 0px;
+    padding: 60px;
+    &__mainContent-likeBtn{
+      display: inline;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $like;
+      background: none;
+      font-size: 20px;
+      margin: 0 40px 0 520px;
+    }
+    &__updatedate-category{
+      font-size: 10px;
+      color: $secondaryColor;
+      margin: 28px 0 0 0;
+    }
+  }
+  
+  .joke-ref a{
+    color: $idColor;
+    font-size: 10px;
+  }
+  .joke-ref{
+    color:$secondaryColor
+  }
+  .joke-body{
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  
+  .jokesCardInfoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 29px;
+    &__itemTime{
+      font-size: 10px;
+      color: $secondaryColor;
+    }
+    &__itemcategory{
+      background: #fff;
+      width: 107px;
+      height: 24px;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding-top:7px;
+      color: black;
+      border-radius: 6px;
+    }
+  }

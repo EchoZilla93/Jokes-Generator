@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.scss';
 
-import MainContent from '../screens/MainContent';
-import FavoriteContent from '../screens/FavoriteContent';
+import MainContent from './windows/MainContent';
+import FavoriteContent from './windows/FavoriteContent';
 
 const App = () => {
   return (

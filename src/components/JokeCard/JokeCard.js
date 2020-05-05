@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import './jokeCardStyles.scss';
 
 const JokeCard = props => {
+
+    useEffect(() => {
+        console.log(props.category);
+    })
+
     return(
         <div className="jokeCardContainer">
             <div className="jokeCardContainer__mainContent">
@@ -12,7 +19,9 @@ const JokeCard = props => {
             </div>
             <div className="jokesCardInfoContainer">
                 <p className="jokesCardInfoContainer__itemTime">Last Update: {props.update} hours ago</p>
-                <div className="jokesCardInfoContainer__itemcategory">{props.category}</div>
+     
+                    <div className="jokesCardInfoContainer__itemcategory">{props.category}</div>
+               
             </div>
         </div>    
     );

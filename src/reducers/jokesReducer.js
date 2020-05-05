@@ -1,19 +1,21 @@
-const INITIAL_STATE= []
+const INITIAL_STATE = {
+    joke:'',
+    multipleJokes:{
+        total: 0,
+        result:[]
+    }
+} 
 
 export default (state = INITIAL_STATE,action) => {
     switch(action.type){
-        case 'FETCH_RANDOM':
-            return action.payload;
-        case 'FETCH_ANIMAL':
-            return action.payload;
-         case 'FETCH_CAREER':
-             return action.payload;  
-         case 'FETCH_CELEBRITY':
-             return action.payload;
-        case 'FETCH_DEV':
-            return action.payload;  
-        case 'FETCH_FREE':
-            return action.payload;              
+       case 'FETCH_JOKE':
+           if (action.payload.total){
+               var searchJokes = {joke: '', multipleJokes:action.payload};
+               return searchJokes;
+           }else{
+               var joke = {joke: action.payload ,multipleJokes:state.multipleJokes};
+               return joke
+           }        
         default:
             return state;   
     };
