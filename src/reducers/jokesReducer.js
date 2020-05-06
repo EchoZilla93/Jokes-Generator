@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
     joke:'',
     multipleJokes:{
-        total: 0,
+        total:0,
         result:[]
     }
 } 

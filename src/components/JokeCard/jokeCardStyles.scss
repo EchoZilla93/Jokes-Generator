@@ -4,7 +4,7 @@ $secondaryColor: #ABABAB;
 $primaryColor:#F8F8F8;
 
 .jokeCardContainer{
-    max-width: 680px;
+    width: 680px;
     background: $primaryColor;
     border-radius: 20px;
     margin: 40px 0 78px 0px;
@@ -22,7 +22,18 @@ $primaryColor:#F8F8F8;
     &__updatedate-category{
       font-size: 10px;
       color: $secondaryColor;
-      margin: 28px 0 0 0;
+      margin: 38px 0 0 0;
+    }
+    &__static{
+        position: relative;
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background: #fff;
+        color: $secondaryColor;
+        font-size: 25px;
+        text-align:center;
+        padding: 6px;
     }
   }
   

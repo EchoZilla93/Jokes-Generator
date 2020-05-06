@@ -10,7 +10,7 @@ import {
 import JokeCard from '../JokeCard/JokeCard';
 import './getJokeBtnStyles.scss';
 
-const GetJokeBtn = () =>{
+export const GetJokeBtn = () =>{
     const dispatch = useDispatch();
     const [card,setCard] = useState(false);
     //States:

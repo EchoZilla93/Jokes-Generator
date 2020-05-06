@@ -1,0 +1,57 @@
+$contentMargin: -47px 175px 0 130px;
+.favoriteCard{
+    margin: 20px 40px 0 40px;
+    background: #fff;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #F8F8F8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    &__status{
+        margin: 20px 20px 0 360px;
+        font-size: 20px;
+    }
+    .heart{
+        color: #FF6767;
+    }
+    &__staticImage{
+        margin: 5px 0 20px 25px;
+        background: #F8F8F8;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+    }
+    .static{
+        padding: 10px;
+        color:  #ABABAB;;
+        font-size: 20px;
+    }
+    &__mainContent{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+        margin: $contentMargin;
+    }
+    &__ID{
+        font-size: 10px;
+        font-weight: 500;
+        color:#ABABAB;
+        margin-bottom: 5px;
+    }
+    a{
+        color: #8EA7FF;
+        font-size: 10px;
+    }
+    .textcontent{
+        width: 300px;
+        font-size: 14px;
+    }
+    &__updateInfo{
+        font-size: 10px;
+        color:#ABABAB;
+    }
+    .updateInfo{
+        margin: 20px 0 20px 130px;
+    }
+
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './headStyles.scss';
 
-const Head = () =>{
+export const Head = () =>{
     return(
         <div className="header">
             <div className="header__logo">

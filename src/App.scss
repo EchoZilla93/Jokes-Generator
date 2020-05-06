@@ -13,14 +13,3 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: normal;
   font-family: 'Roboto',sans-serif;
 }
-
-//FAVORITE WINDOW:
-.favorite{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  align-content: flex-end;
-  width: 480px;
-  height: 800px;
-}

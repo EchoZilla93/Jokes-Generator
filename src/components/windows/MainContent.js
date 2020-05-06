@@ -4,7 +4,7 @@ import Head from '../Header/Head';
 import CheckBoxesRender from '../Checkbox/CheckBoxesRender';
 import GetJokeBtn from '../../components/GetJokeBtn/GetJokeBtn';
 
-const MainContent = () => {
+export const MainContent = () => {
     return (
         <div>
             <Head/>

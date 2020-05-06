@@ -4,7 +4,7 @@ import {checkboxes} from '../../helpers/Helpers';
 import {CheckBoxBluePrint} from './CheckBoxBluePrint';
 import './checkBoxStyles.scss'
 
-const CheckBoxRender = () => {
+export const CheckBoxRender = () => {
     const [selectedId, setSelectedId] = useState(1);
     const changeHandler = (id) => {
         setSelectedId(id);

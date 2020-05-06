@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 import {setCategory} from '../../actions/index';
 import './dropDownStyles.scss';
 
-const SearchInput = () => {
+export const SearchInput = () => {
     const dispatch = useDispatch();
 
     const setSpecificCategory = value =>{

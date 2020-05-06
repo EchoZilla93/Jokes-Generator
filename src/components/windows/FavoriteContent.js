@@ -1,10 +1,18 @@
 import React from 'react';
 
-const FavoriteContent = () =>{
-    return(
-        <div className="favorite">
+import FavoriteCard from '../Favorite/FavoriteCard';
+import './favoriteStyles.scss'
 
-        </div>
+export const FavoriteContent = () =>{
+    return(
+        <aside className="favorite">
+            <h1>Favorite</h1>
+            <FavoriteCard/>
+            <FavoriteCard/>
+            <FavoriteCard/>
+            <FavoriteCard/>
+            <FavoriteCard/>
+        </aside>
     )
 }
 

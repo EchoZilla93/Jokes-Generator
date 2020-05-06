@@ -1,0 +1,16 @@
+$background:#F8F8F8;
+$headingColor:#ABABAB;
+.favorite{
+    float: right;
+    position: absolute;
+    left: 66%;
+    height: 100%;
+    top: 0;
+    width: 480px;
+    background: $background;
+    h1{
+        color: $headingColor;
+        font-size: 20px;
+        padding: 40px
+    }
+}
