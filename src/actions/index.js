@@ -1,6 +1,6 @@
 import chuckNorisJokes from '../API/chuckNorisJokes';
-//Categories Action Creators
 
+//Categories Action Creators:
 export const getCategoryJoke = (value) => async dispatch =>{
             var response;
             switch(value){
@@ -26,5 +26,15 @@ export const setCategory = (value) => {
     return{
         type:'SET_CATEGORY',
         payload:value
+    }
+}
+
+//FAVORITES:
+export const createFavorite = favorite => {
+    return{
+        type: 'CREATE_FAVORITE',
+        payload: {
+            favorite
+        }
     }
 }

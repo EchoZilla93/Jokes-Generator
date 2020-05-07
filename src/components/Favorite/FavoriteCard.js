@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 import './favoriteCard.scss';
 
 export const FavoriteCard = props =>{
+
     FavoriteCard.propType = {
         id: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
         updateInfo:PropTypes.number.isRequired
     }
+    
     return(
         <div className="favoriteCard">
             <div className="favoriteCard__status"><i className="far fa-heart heart"></i></div>
