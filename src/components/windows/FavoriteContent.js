@@ -1,17 +1,13 @@
 import React from 'react';
 
-import FavoriteCard from '../Favorite/FavoriteCard';
+import FavoriteCardBluePrint from '../Favorite/FavoriteCardBluePrint';
 import './favoriteStyles.scss'
 
 export const FavoriteContent = () =>{
     return(
         <aside className="favorite">
             <h1>Favorite</h1>
-            <FavoriteCard/>
-            <FavoriteCard/>
-            <FavoriteCard/>
-            <FavoriteCard/>
-            <FavoriteCard/>
+            <FavoriteCardBluePrint />
         </aside>
     )
 }

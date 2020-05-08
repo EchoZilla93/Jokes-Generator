@@ -159,3 +159,15 @@ $primaryColor:#F8F8F8;
       padding-left: 15px;
     }
   }
+
+  //TABLET 
+  @media (max-width:1024px){
+    .searchInput__field{
+      min-width:500px;
+    }
+  }
+  @media (max-width:768px){
+    .searchInput__field{
+      min-width: 400px;
+    }
+  }

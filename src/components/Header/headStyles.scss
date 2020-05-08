@@ -8,14 +8,12 @@
 
 .header{
     @include flex-columnHead();
+    margin: 40px 0 78px 140px;
     &__logo{
       text-transform: uppercase;
       font-weight: 700;
       font-size: 20px;
-      margin: 40px 0 78px 140px;
-    }
-    &__welcomesTxt{
-     margin: 40px 0 0 140px;
+      margin-bottom: 78px;
     }
     &__welcomesTxt-1stfloor{
      font-weight: 700;
@@ -25,4 +23,10 @@
      font-weight: 500;
      font-size: 24px;
        }
+   }
+   //TABLET
+   @media (max-width:1024px),(max-width:768px){
+     .header{
+      margin: 40px 0 43px 40px;
+     }
    }

@@ -71,3 +71,16 @@ $primaryColor:#F8F8F8;
       border-radius: 6px;
     }
   }
+//TABLET PRO
+  @media (max-width:1024px){
+    .jokeCardContainer{
+      width: 754px;
+    }
+  }
+  //TABLET 
+  @media (max-width:768px){
+    .jokeCardContainer{
+      margin: 40px 0 40px -18px;
+      width: 724px;
+    }
+  }

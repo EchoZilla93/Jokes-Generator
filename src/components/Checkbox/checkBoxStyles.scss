@@ -4,3 +4,10 @@
           padding-bottom: 21px;
       }
   }
+
+  //Tablet:
+  @media (max-width:1024px),(max-width:768px){
+      .checkboxContainer{
+          margin: 10px 0 78px 40px;
+      }
+  }
