@@ -4,83 +4,105 @@ $secondaryColor: #ABABAB;
 $primaryColor:#F8F8F8;
 
 .jokeCardContainer{
-    width: 680px;
-    background: $primaryColor;
-    border-radius: 20px;
-    margin: 40px 0 78px 0px;
-    padding: 60px;
-    &__mainContent-likeBtn{
-      display: inline;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      color: $like;
-      background: none;
-      font-size: 20px;
-      margin: 0 40px 0 520px;
-    }
-    &__updatedate-category{
-      font-size: 10px;
-      color: $secondaryColor;
-      margin: 38px 0 0 0;
-    }
-    &__static{
+  width: 680px;
+  background:$primaryColor;
+  border-radius:20px;
+  margin: 40px 0 78px 0px;
+  padding: 50px;
+  &__icons{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__static{
         position: relative;
+        top: -5px;
         height: 40px;
         width: 40px;
         border-radius: 50px;
         background: #fff;
         color: $secondaryColor;
         font-size: 25px;
-        text-align:center;
         padding: 6px;
-    }
+        text-align:center;
   }
-  
-  .joke-ref a{
-    color: $idColor;
-    font-size: 10px;
+  &__likeBtn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $like;
+    background: none;
+    font-size: 20px;
   }
-  .joke-ref{
-    color:$secondaryColor
-  }
-  .joke-body{
-    margin-top: 5px;
-    font-size: 18px;
-  }
-  
-  .jokesCardInfoContainer{
+  &__bodyContainer{
+    width: 450px;
     display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -40px;
+    margin: 0 auto;
+  }
+  &__jokeID{
+    color: $secondaryColor;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__jokeID a{
+    color: $idColor;
+  }
+  &__joke-body{
+    font-size: 18px;
+    color:#333;
+  }
+}
+
+  .jokesCardInfoContainer{
+    display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 29px;
+    width: 450px;
+    margin: 0 auto;
     &__itemTime{
       font-size: 10px;
       color: $secondaryColor;
+  }
+  &__itemcategory{
+    margin-right:-67px;
+    background: #fff;
+    width: 107px;
+    height: 24px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top:7px;
+    color: black;
+    border-radius: 6px;
+  }
+}
+
+//Mobile:
+@media (max-width:375px),(max-width:414px),(max-width:320px){
+  .jokeCardContainer{
+    width: 340px;
+    &__bodyContainer{
+      width: 200px;
     }
+    &__static{
+      right:35px;
+    }
+  }
+  .jokesCardInfoContainer{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    left: -45px;
     &__itemcategory{
-      background: #fff;
-      width: 107px;
-      height: 24px;
-      text-align: center;
-      font-size: 10px;
-      font-weight: 500;
-      text-transform: uppercase;
-      padding-top:7px;
-      color: black;
-      border-radius: 6px;
+      position: relative;
+      top: 35px;
+      right: 295px;
     }
   }
-//TABLET PRO
-  @media (max-width:1024px){
-    .jokeCardContainer{
-      width: 754px;
-    }
-  }
-  //TABLET 
-  @media (max-width:768px){
-    .jokeCardContainer{
-      margin: 40px 0 40px -18px;
-      width: 724px;
-    }
-  }
+}

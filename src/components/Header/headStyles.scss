@@ -30,3 +30,9 @@
       margin: 40px 0 43px 40px;
      }
    }
+   //MOBILE
+   @media (max-width:414px),(max-width:375px),(max-width:320px){
+     .header__welcomesTxt-1stfloor{
+       font-size: 24px;
+     }
+   }

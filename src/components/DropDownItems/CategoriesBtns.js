@@ -31,7 +31,7 @@ export const CategoriesBtns = () => {
     }
 
     return(
-        <span className="btnContainer">
+        <div className="btnContainer">
             <button 
             className={'btnContainer__btn animal '} 
             onClick={e => setJokeCategory(e, 'animal')}>animal</button>
@@ -44,7 +44,7 @@ export const CategoriesBtns = () => {
             <button 
             className={`btnContainer__btn dev`} 
             onClick={e => setJokeCategory(e, 'dev')}>dev</button>
-        </span>
+        </div>
     );
 };
 

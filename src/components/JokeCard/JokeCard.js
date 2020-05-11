@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -13,10 +13,7 @@ export const JokeCard = props => {
         update:PropTypes.number.isRequired,
         category:PropTypes.string.isRequired
     };
-    //Creating favorite Content:
-    //const [id,setId] = useState(props.id);
-    //const [favJoke,setFavJoke] = useState(props.joke);
-    //const [update,setUpdate] = useState(props.update);
+
     const dispatch = useDispatch();
     
     const clickFavorite = () =>{
@@ -27,24 +24,26 @@ export const JokeCard = props => {
         };
         dispatch(createFavorite(favorite));
     }
-
+    if(props.category === []){
+        document.querySelector('.jokesCardInfoContainer__itemcategory').style.opacity = '0';
+    }
     return(
         <div className="jokeCardContainer">
-            <div className="jokeCardContainer__static"><i className="far fa-comment-dots"></i></div>
-            <div className="jokeCardContainer__mainContent">
-                <button onClick={clickFavorite} className="jokeCardContainer__mainContent-likeBtn"><i className="far fa-heart"></i></button>
-                <h6 className="joke-ref">ID: <a href="/">{props.id}</a></h6>
-                <p className="jokeCardContainer__mainContent joke-body">
-                    {props.joke}
-                </p>
+            <div className="jokeCardContainer__icons">
+                    <div className="jokeCardContainer__static"><i className="far fa-comment-dots"></i></div>
+                    <button onClick={clickFavorite} className="jokeCardContainer__likeBtn"><i className="far fa-heart"></i></button>
             </div>
+                <div className="jokeCardContainer__bodyContainer">
+                        <h6 className="jokeCardContainer__jokeID">ID: <a href="/">{props.id}</a></h6>
+                        <p className="jokeCardContainer__joke-body">
+                            {props.joke}
+                        </p>
+                </div>
             <div className="jokesCardInfoContainer">
                 <p className="jokesCardInfoContainer__itemTime">Last Update: {props.update} hours ago</p>
-     
                     <div className="jokesCardInfoContainer__itemcategory">{props.category}</div>
-               
-            </div>
-        </div>    
+               </div>
+            </div>  
     );
 };
 

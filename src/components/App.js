@@ -6,10 +6,14 @@ import FavoriteContent from './windows/FavoriteContent';
 
 const App = () => {
   return (
-    <div className="wrapper">
-      <MainContent/>
-      <FavoriteContent/>
-    </div>
+    <div>
+        <div className="wrapper">
+            <MainContent/>
+        </div>
+          <div className="wrapperfav">
+              <FavoriteContent/>
+          </div>
+      </div>
   )
 }
 export default App;

@@ -171,3 +171,19 @@ $primaryColor:#F8F8F8;
       min-width: 400px;
     }
   }
+//MOBILE:
+  @media (max-width:414px),(max-width:375px),(max-width:320px){
+    .btnContainer__btn{
+      width: 85px;
+      height: 28px;
+      font-size: 12px;
+    }
+    .btnContainer{
+      max-width: 300px;
+    }
+    .searchInput__field{
+      min-width: 300px;
+      max-width: 350px;
+    }
+
+  }

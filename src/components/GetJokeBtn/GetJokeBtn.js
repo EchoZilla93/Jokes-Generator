@@ -25,13 +25,16 @@ export const GetJokeBtn = () =>{
        setCard(true);
     }
 
+    const jokedate = toString(jokes.updated_at);
+    const updated = new Date(jokedate);
+
     return(
         <div className="getJokeBtnContainer">
             <button onClick={onGetJokeClick} className="getJokeBtnContainer__item">Get a joke</button>
             {card && !multipleJokes && <JokeCard
                         id={joke.id}
                         joke={joke.value}
-                        update={joke.updated_at}
+                        update={updated.getHours()}
                         category={joke.categories}
                     />}
             {card && multipleJokes && <div>
