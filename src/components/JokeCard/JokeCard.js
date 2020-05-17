@@ -1,9 +1,8 @@
 import React from 'react';
-import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
 
 import './jokeCardStyles.scss';
-import {createFavorite} from '../../actions/index';
+import {setFavoriteJoke} from '../../localStorage';
 
 export const JokeCard = props => {
 
@@ -14,18 +13,13 @@ export const JokeCard = props => {
         category:PropTypes.array.isRequired
     };
 
-    const dispatch = useDispatch();
-    
     const clickFavorite = () =>{
-        const favorite = {
+        const favoriteJoke = {
             id:props.id,
             favJoke:props.joke,
-            update:props.update
+            update:props.updatedAt
         };
-        dispatch(createFavorite(favorite));
-        localStorage.setItem('test', "Hello World and Pisya")
-        var result = localStorage.getItem('test');
-        console.log(result);
+        setFavoriteJoke(favoriteJoke);
     }
   
     return(
