@@ -1,52 +1,40 @@
-import React,{useState} from 'react';
-import {useSelector,useDispatch} from 'react-redux';
-import {getCategoryJoke} from '../../actions';
-import {
-    multipleJokesExist,
-    getJoke,
-    getMultipleJokes
-} from '../../selectors/Jokes';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getCategoryJoke } from '../../actions';
 
 import JokeCard from '../JokeCard/JokeCard';
 import './getJokeBtnStyles.scss';
 
-export const GetJokeBtn = () =>{
+export const GetJokeBtn = () => {
     const dispatch = useDispatch();
-    const [card,setCard] = useState(false);
+    const [card, setCard] = useState(false);
     //States:
-    const joke = useSelector(state => getJoke(state));
-    const jokes = useSelector(state => getMultipleJokes(state));
+    const jokes = useSelector(state => state.jokes.jokes);
     const category = useSelector(state => state.jokeCategoryToSearch);
-    const multipleJokes = useSelector(state => multipleJokesExist(state));
 
 
-    const onGetJokeClick = () =>{
-       dispatch(getCategoryJoke(category));
-       setCard(true);
+    const onGetJokeClick = () => {
+        dispatch(getCategoryJoke(category));
+        setCard(true);
     }
 
 
 
-    return(
+    return (
         <div className="getJokeBtnContainer">
             <button onClick={onGetJokeClick} className="getJokeBtnContainer__item">Get a joke</button>
-            {card && !multipleJokes && <JokeCard
+            {jokes && card &&
+                jokes.map(joke => (
+                    <JokeCard
+                        key={joke.id}
                         id={joke.id}
                         joke={joke.value}
                         updatedAt={joke.updated_at}
                         category={joke.categories}
-                    />}
-            {card && multipleJokes && 
-                jokes.map(joke => (
-                    <JokeCard
-                    key={joke.id}
-                    id={joke.id}
-                    joke={joke.value}
-                    updatedAt={joke.updated_at}
-                    category={joke.categories}
-                />
-            ))}
-        </div> 
+                        favorite={joke.favorite}
+                    />
+                ))}
+        </div>
     )
 }
 

@@ -30,11 +30,26 @@ export const setCategory = value => {
 }
 
 //FAVORITES:
-export const createFavorite = favorite => {
-    return{
-        type: 'CREATE_FAVORITE',
+//FAVORITES:
+export const addFavorite = id => {
+    return {
+        type: 'ADD_FAVORITE',
+        payload: id
+    }
+};
+
+export const removeFavorite = id => {
+    return {
+        type: 'REMOVE_FAVORITE',
+        payload: id
+    }
+}
+
+export const initFavoriteJokes = (jokes) => {
+    return {
+        type: 'INIT_FAV_JOKES',
         payload: {
-            favorite
+            jokes
         }
     }
 }
