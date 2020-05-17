@@ -25,8 +25,7 @@ export const GetJokeBtn = () =>{
        setCard(true);
     }
 
-    const jokedate = toString(jokes.updated_at);
-    const updated = new Date(jokedate);
+
 
     return(
         <div className="getJokeBtnContainer">
@@ -34,20 +33,19 @@ export const GetJokeBtn = () =>{
             {card && !multipleJokes && <JokeCard
                         id={joke.id}
                         joke={joke.value}
-                        update={updated.getHours()}
+                        updatedAt={joke.updated_at}
                         category={joke.categories}
                     />}
-            {card && multipleJokes && <div>
-                {jokes.map(data => (
+            {card && multipleJokes && 
+                jokes.map(joke => (
                     <JokeCard
-                    key={data.id}
-                    id={data.id}
-                    joke={data.value}
-                    update={data.updated_at}
-                    category={data.categories}
-                    />
-                ))}
-            </div>}
+                    key={joke.id}
+                    id={joke.id}
+                    joke={joke.value}
+                    updatedAt={joke.updated_at}
+                    category={joke.categories}
+                />
+            ))}
         </div> 
     )
 }

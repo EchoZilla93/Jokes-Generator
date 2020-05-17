@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
     joke:'',
     multipleJokes:{
-        total:0,
+        total:null,
         result:[]
     }
 } 
@@ -13,7 +13,7 @@ export default (state = INITIAL_STATE,action) => {
                var searchJokes = {joke: '', multipleJokes:action.payload};
                return searchJokes;
            }else{
-               var joke = {joke: action.payload ,multipleJokes:state.multipleJokes};
+               var joke = {joke: action.payload ,multipleJokes:INITIAL_STATE.multipleJokes};
                return joke
            }        
         default:

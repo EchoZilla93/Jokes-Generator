@@ -2,9 +2,7 @@ export const multipleJokesExist = state => {
     return state &&
            state.jokes &&
            state.jokes.multipleJokes &&
-           state.jokes.multipleJokes.total &&
-           state.jokes.multipleJokes.total > 0;
-
+           state.jokes.multipleJokes.total;
 }
 
 export const getJoke = state => {

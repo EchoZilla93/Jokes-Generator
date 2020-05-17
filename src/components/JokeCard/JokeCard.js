@@ -8,10 +8,10 @@ import {createFavorite} from '../../actions/index';
 export const JokeCard = props => {
 
     JokeCard.propTypes = {
-        id:PropTypes.number.isRequired,
+        id:PropTypes.string.isRequired,
         joke:PropTypes.string.isRequired,
-        update:PropTypes.number.isRequired,
-        category:PropTypes.string.isRequired
+        update:PropTypes.number,
+        category:PropTypes.array.isRequired
     };
 
     const dispatch = useDispatch();
@@ -23,10 +23,11 @@ export const JokeCard = props => {
             update:props.update
         };
         dispatch(createFavorite(favorite));
+        localStorage.setItem('test', "Hello World and Pisya")
+        var result = localStorage.getItem('test');
+        console.log(result);
     }
-    if(props.category === []){
-        document.querySelector('.jokesCardInfoContainer__itemcategory').style.opacity = '0';
-    }
+  
     return(
         <div className="jokeCardContainer">
             <div className="jokeCardContainer__icons">
@@ -40,8 +41,14 @@ export const JokeCard = props => {
                         </p>
                 </div>
             <div className="jokesCardInfoContainer">
-                <p className="jokesCardInfoContainer__itemTime">Last Update: {props.update} hours ago</p>
-                    <div className="jokesCardInfoContainer__itemcategory">{props.category}</div>
+                <p className="jokesCardInfoContainer__itemTime">
+                    Last Update: {Math.round((new Date() - new Date(props.updatedAt)) / 1000 / 60 / 60)}   &nbsp;hours ago
+                </p>
+                {props.category && props.category.length > 0 && 
+                    <div className="jokesCardInfoContainer__itemcategory">
+                        {props.category}
+                    </div>
+                }
                </div>
             </div>  
     );

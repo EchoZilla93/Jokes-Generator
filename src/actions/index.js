@@ -1,7 +1,7 @@
 import chuckNorisJokes from '../API/chuckNorisJokes';
 
 //Categories Action Creators:
-export const getCategoryJoke = (value) => async dispatch =>{
+export const getCategoryJoke = value => async dispatch =>{
             var response;
             switch(value){
                 case 'random':
@@ -22,7 +22,7 @@ export const getCategoryJoke = (value) => async dispatch =>{
             dispatch({type:'FETCH_JOKE', payload : result.data});
         };
 
-export const setCategory = (value) => {
+export const setCategory = value => {
     return{
         type:'SET_CATEGORY',
         payload:value
