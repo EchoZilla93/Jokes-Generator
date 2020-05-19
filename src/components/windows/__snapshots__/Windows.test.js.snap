@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`windows content favoritewindow renders expect snapshot 1`] = `
+<FavoriteContent
+  isDesktop={[Function]}
+  isMobile={[Function]}
+  isTablet={[Function]}
+/>
+`;
+
+exports[`windows content mainwindow renders expect snapshot 1`] = `
+<div>
+  <Head />
+  <CheckBoxRender />
+  <GetJokeBtn />
+</div>
+`;

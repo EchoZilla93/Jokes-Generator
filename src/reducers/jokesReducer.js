@@ -2,6 +2,7 @@ import {
     setFavoriteJoke,
     removeFavoriteJoke
 } from '../localStorage';
+
 const INITIAL_STATE = {
     jokes: [],
     favoriteJokes: []

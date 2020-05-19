@@ -16,7 +16,7 @@ export const CheckBoxRender = () => {
                 {checkboxes.map(checkBox => (
                     <CheckBoxBluePrint
                         key={checkBox.id}
-                        type= {'checkbox'}
+                        type= {'radio'}
                         onSelect = {changeHandler}
                         selectedId = {selectedId}
                         {...checkBox}

@@ -32,6 +32,7 @@ export const GetJokeBtn = () => {
                         updatedAt={joke.updated_at}
                         category={joke.categories}
                         favorite={joke.favorite}
+                        url={joke.url}
                     />
                 ))}
         </div>

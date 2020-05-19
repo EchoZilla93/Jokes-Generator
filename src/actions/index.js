@@ -30,7 +30,6 @@ export const setCategory = value => {
 }
 
 //FAVORITES:
-//FAVORITES:
 export const addFavorite = id => {
     return {
         type: 'ADD_FAVORITE',
@@ -45,7 +44,7 @@ export const removeFavorite = id => {
     }
 }
 
-export const initFavoriteJokes = (jokes) => {
+export const initFavoriteJokes = jokes => {
     return {
         type: 'INIT_FAV_JOKES',
         payload: {

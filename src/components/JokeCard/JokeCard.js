@@ -27,7 +27,7 @@ export const JokeCard = props => {
                 </button>
             </div>
             <div className="jokeCardContainer__bodyContainer">
-                <h6 className="jokeCardContainer__jokeID">ID: <a href="/">{props.id}</a></h6>
+                <h6 className="jokeCardContainer__jokeID">ID: <a href={props.url}>{props.id}</a></h6>
                 <p className="jokeCardContainer__joke-body">
                     {props.joke}
                 </p>

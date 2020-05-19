@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`favorite section components renders expect snapshot 1`] = `
+<div
+  className="favoritesList"
+>
+  <div
+    className="favoritesList__item"
+  >
+    <FavoriteCardBluePrint />
+  </div>
+</div>
+`;
+
+exports[`favorite section components renders expect snapshot 2`] = `
+<div
+  className="favoriteTabletView"
+>
+  <button
+    className="favoriteTabletView__openFav"
+    onClick={[Function]}
+  >
+    <i
+      className="fas fa-bars"
+    />
+  </button>
+  <h1
+    className="favoriteTabletView__heading"
+  >
+    Favorite
+  </h1>
+</div>
+`;

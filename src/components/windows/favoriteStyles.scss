@@ -2,11 +2,12 @@ $background:#F8F8F8;
 $headingColor:#ABABAB;
 .favorite{
     float: right;
-    position: absolute;
+    position: fixed;
     left: 66%;
     top: 0;
-    width: 480px;
-    height: 100vh;
+    width: 480px;;
+    min-height: 100vh;
+	bottom: 0;
     background: $background;
     h1{
         color: $headingColor;

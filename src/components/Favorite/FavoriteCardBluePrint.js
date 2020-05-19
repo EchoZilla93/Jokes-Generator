@@ -13,21 +13,32 @@ export const FavoriteCardBluePrint = () => {
         updateInfo: PropTypes.number.isRequired
     };
 
-    return (
+    const renderFavorite = favoriteJokes && favoriteJokes.map(joke => {
+        return (
         <div className="favoriteCard">
-            <div className="favoriteCard__status"><i className="far fa-heart heart"></i></div>
-            <div className="favoriteCard__staticImage"><i className="far fa-comment-dots static"></i></div>
+            <div className="favoriteCard__status">
+                <i className="far fa-heart heart"></i>
+            </div>
+            <div className="favoriteCard__staticImage">
+                <i className="far fa-comment-dots static"></i>
+                </div>
             <div className="favoriteCard__mainContent">
-                <h6 className="favoriteCard__ID">ID: <a href='/'>1</a></h6>
-                <div className="textcontent"><p>2</p></div>
+                <h6 className="favoriteCard__ID">ID: <a href='/'>{joke.id}</a></h6>
+            <div className="textcontent">
+                 <p>{joke.favJoke}</p>
+                </div>
             </div>
             <div className="favoriteCard__updateInfo">
-                <p className="updateInfo">Last Update:hours ago</p>
+        <p className="updateInfo">Last Update: {joke.updated_at}hours ago</p>
             </div>
-            {favoriteJokes && favoriteJokes.map(joke => (
-                <p>{joke.favJoke}</p>
-            ))}
+            </div>
+            )})
+
+    return (
+        <div>
+            {renderFavorite}
         </div>
+        
     )
 }
 

@@ -24,5 +24,3 @@ const FavTablet = () => {
 };
 
 export default FavTablet;
-//<i class="fas fa-times"></i>
-//fas fa-bars
