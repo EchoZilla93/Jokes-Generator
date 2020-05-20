@@ -2,7 +2,6 @@ import {
     setFavoriteJoke,
     removeFavoriteJoke
 } from '../localStorage';
-
 const INITIAL_STATE = {
     jokes: [],
     favoriteJokes: []
@@ -31,13 +30,19 @@ export default (state = INITIAL_STATE, action) => {
         case 'REMOVE_FAVORITE':
             //removing favorite joke from state
             const favoriteJokes = state.favoriteJokes;
-            const index = favoriteJokes.findIndex(joke => joke.id === action.payload);
+            let index = favoriteJokes.findIndex(joke => joke.id === action.payload);
             //removing favorite joke from localStorage
             removeFavoriteJoke(favoriteJokes[index]);
-
             favoriteJokes.splice(index, 1);
 
-            return { ...state, favoriteJokes: favoriteJokes }
+            //removing like from jokes 
+            index = state.jokes.findIndexj(joke => joke.id === action.payload);
+            var newJokes = state.jokes;
+            if (index) {
+                newJokes[index].favorite = false;
+            }
+
+            return { ...state, favoriteJokes: favoriteJokes, jokes: newJokes }
         case 'INIT_FAV_JOKES':
             return { ...state, favoriteJokes: action.payload.jokes }
         default:

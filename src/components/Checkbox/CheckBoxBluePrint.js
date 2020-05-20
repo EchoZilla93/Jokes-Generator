@@ -7,20 +7,8 @@ import CategoriesBtns from '../DropDownItems/CategoriesBtns';
 import SearchInput from '../DropDownItems/SearchInput';
 
 export const CheckBoxBluePrint = props => {
-
-    CheckBoxBluePrint.propTypes = {
-        type: PropTypes.string.isRequired,
-        onSelect : PropTypes.func.isRequired,
-        selectedId: PropTypes.number.isRequired,
-        id: PropTypes.number.isRequired,
-        className: PropTypes.string.isRequired,
-        value: PropTypes.string.isRequired
-    };
-
     const isChecked = props.id === props.selectedId;
-
     const dispatch = useDispatch();
-
     const renderInput = props => {
         switch(props.value){
             case 'Random':
@@ -69,6 +57,15 @@ export const CheckBoxBluePrint = props => {
                 return  <h1>...Loading...</h1>
         }
     }
+
+    CheckBoxBluePrint.propTypes = {
+        type: PropTypes.string.isRequired,
+        onSelect : PropTypes.func.isRequired,
+        selectedId: PropTypes.number.isRequired,
+        id: PropTypes.number.isRequired,
+        className: PropTypes.string.isRequired,
+        value: PropTypes.string.isRequired
+    };
 
     return renderInput(props);
 }

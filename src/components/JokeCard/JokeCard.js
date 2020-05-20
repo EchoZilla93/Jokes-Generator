@@ -7,16 +7,6 @@ import { addFavorite } from '../../actions';
 
 export const JokeCard = props => {
     const dispatch = useDispatch();
-
-    JokeCard.propTypes = {
-        id: PropTypes.string.isRequired,
-        joke: PropTypes.string.isRequired,
-        update: PropTypes.number,
-        category: PropTypes.array.isRequired,
-        favorite: PropTypes.bool
-    };
-
-
     return (
         <div className="jokeCardContainer">
             <div className="jokeCardContainer__icons">
@@ -44,6 +34,14 @@ export const JokeCard = props => {
             </div>
         </div>
     );
+};
+
+JokeCard.propTypes = {
+    id: PropTypes.string.isRequired,
+    joke: PropTypes.string.isRequired,
+    update: PropTypes.number,
+    category: PropTypes.array.isRequired,
+    favorite: PropTypes.bool
 };
 
 export default JokeCard;

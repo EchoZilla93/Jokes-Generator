@@ -6,13 +6,6 @@ import './favoriteCard.scss';
 
 export const FavoriteCardBluePrint = () => {
     const [favoriteJokes, setFavoriteJokes] = useState([]);
-
-    FavoriteCardBluePrint.propType = {
-        id: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired,
-        updateInfo: PropTypes.number.isRequired
-    };
-
     const renderFavorite = favoriteJokes && favoriteJokes.map(joke => {
         return (
         <div className="favoriteCard">
@@ -39,7 +32,13 @@ export const FavoriteCardBluePrint = () => {
             {renderFavorite}
         </div>
         
-    )
-}
+    );
+};
+
+FavoriteCardBluePrint.propType = {
+    id: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    updateInfo: PropTypes.number.isRequired
+};
 
 export default FavoriteCardBluePrint;
