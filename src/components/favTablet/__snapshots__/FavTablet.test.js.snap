@@ -8,6 +8,8 @@ exports[`favorite section components renders expect snapshot 1`] = `
     className="favoritesList__item"
   >
     <FavoriteCardBluePrint />
+    <FavoriteCardBluePrint />
+    <FavoriteCardBluePrint />
   </div>
 </div>
 `;

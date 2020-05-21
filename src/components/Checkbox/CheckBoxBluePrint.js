@@ -22,7 +22,7 @@ export const CheckBoxBluePrint = props => {
                             onChange={e => props.onSelect(props.id)}
                             type= {props.type}
                             value={props.value}
-                        />{props.value}
+                        /> {props.value}
                     </form>
                 )
             case 'Category':

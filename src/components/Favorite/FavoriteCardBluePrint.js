@@ -6,7 +6,7 @@ import './favoriteCard.scss';
 
 export const FavoriteCardBluePrint = () => {
     const [favoriteJokes, setFavoriteJokes] = useState([]);
-    const renderFavorite = favoriteJokes && favoriteJokes.map(joke => {
+    /*const renderFavorite = favoriteJokes && favoriteJokes.map(joke => {
         return (
         <div className="favoriteCard">
             <div className="favoriteCard__status">
@@ -26,10 +26,26 @@ export const FavoriteCardBluePrint = () => {
             </div>
             </div>
             )})
-
+*/
     return (
         <div>
-            {renderFavorite}
+           <div className="favoriteCard">
+            <div className="favoriteCard__status">
+                <i className="far fa-heart heart"></i>
+            </div>
+            <div className="favoriteCard__staticImage">
+                <i className="far fa-comment-dots static"></i>
+                </div>
+            <div className="favoriteCard__mainContent">
+                <h6 className="favoriteCard__ID">ID: <a href='/'>helloWorld</a></h6>
+            <div className="textcontent">
+                 <p>Chuckies joke</p>
+                </div>
+            </div>
+            <div className="favoriteCard__updateInfo">
+        <p className="updateInfo">Last Update: 200 hours ago</p>
+            </div>
+            </div>
         </div>
         
     );

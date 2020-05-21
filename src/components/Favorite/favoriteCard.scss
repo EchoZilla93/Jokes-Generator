@@ -1,6 +1,5 @@
 $contentMargin: -47px 175px 0 130px;
 .favoriteCard{
-    position: fixed;
     margin: 10px 40px 0 40px;
     background: #fff;
     width: 400px;
@@ -57,13 +56,22 @@ $contentMargin: -47px 175px 0 130px;
 
 }
 
+//Tablet:
+@media(max-width:1024px),(max-width:768px){
+    .favoriteCard{
+        position: relative;
+        top:100px;
+    }
+}
+
 //Mobile:
 @media (max-width:375px),(max-width:414px),(max-width:320px){
     .favoriteCard{
         width: 340px;
         position: relative;
+        left:8%;
         top: 100px;
-        margin:0 auto;
+        margin-bottom: 20px;
     &__status{
             position: relative;
             left: -60px;

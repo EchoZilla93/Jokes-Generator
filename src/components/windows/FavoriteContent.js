@@ -12,6 +12,10 @@ export const FavoriteContent = props =>{
         <aside className="favorite">
             <h1>Favorite</h1>
             <FavoriteCardBluePrint />
+            <FavoriteCardBluePrint />
+            <FavoriteCardBluePrint />
+            <FavoriteCardBluePrint />
+            <FavoriteCardBluePrint />
         </aside>
     )
 }

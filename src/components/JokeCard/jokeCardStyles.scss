@@ -27,11 +27,11 @@ $primaryColor:#F8F8F8;
         text-align:center;
   }
   &__likeBtn{
+    background:none;
     border: none;
     outline: none;
     cursor: pointer;
     color: $like;
-    background: none;
     font-size: 20px;
   }
   &__bodyContainer{

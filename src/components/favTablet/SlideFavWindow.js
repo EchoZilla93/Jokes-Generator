@@ -7,6 +7,8 @@ const SlideFavWindow = () => {
         <div className="favoritesList">
             <div className="favoritesList__item">
                 <FavoriteCardBluePrint/>
+                <FavoriteCardBluePrint />
+                <FavoriteCardBluePrint />
             </div>
         </div>
     )
