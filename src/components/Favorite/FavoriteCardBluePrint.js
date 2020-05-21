@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { getFavoriteJokes } from '../../localStorage';
 
@@ -6,6 +6,17 @@ import './favoriteCard.scss';
 
 export const FavoriteCardBluePrint = () => {
     const [favoriteJokes, setFavoriteJokes] = useState([]);
+    const [likeStatus,setLikeStatus] = useState(true);
+    const favoriteClick = () =>{
+        setLikeStatus(!likeStatus);
+        if(likeStatus){
+            document.getElementById('icon').classList.add('fas');
+            document.getElementById('icon').classList.add('fa-heart');
+        }else{
+            document.getElementById('icon').classList.add('far');
+            document.getElementById('icon').classList.add('fa-heart');
+        }
+    }
     /*const renderFavorite = favoriteJokes && favoriteJokes.map(joke => {
         return (
         <div className="favoriteCard">
@@ -31,7 +42,7 @@ export const FavoriteCardBluePrint = () => {
         <div>
            <div className="favoriteCard">
             <div className="favoriteCard__status">
-                <i className="far fa-heart heart"></i>
+                <i onClick={favoriteClick} className="fas fa-heart" id="icon"></i>
             </div>
             <div className="favoriteCard__staticImage">
                 <i className="far fa-comment-dots static"></i>

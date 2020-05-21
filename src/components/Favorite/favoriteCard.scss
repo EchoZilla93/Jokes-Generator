@@ -1,4 +1,5 @@
 $contentMargin: -47px 175px 0 130px;
+$like:#FF6767;
 .favoriteCard{
     margin: 10px 40px 0 40px;
     background: #fff;
@@ -9,9 +10,8 @@ $contentMargin: -47px 175px 0 130px;
     &__status{
         margin: 20px 20px 0 360px;
         font-size: 20px;
-    }
-    .heart{
-        color: #FF6767;
+        color: $like;
+        cursor: pointer;
     }
     &__staticImage{
         margin: 5px 0 20px 25px;
