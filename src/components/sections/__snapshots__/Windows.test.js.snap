@@ -16,9 +16,7 @@ exports[`windows content favoritewindow renders expect snapshot 1`] = `
 `;
 
 exports[`windows content mainwindow renders expect snapshot 1`] = `
-<div
-  className="wrapper"
->
+<div>
   <Head />
   <CheckBoxRender />
   <div
