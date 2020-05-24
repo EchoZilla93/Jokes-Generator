@@ -1,13 +1,81 @@
-.checkboxContainer{
+.checkboxContainer {
   margin: 40px 0 78px 140px;
-  &__form{
-      padding-bottom: 21px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__container {
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 6px 12px;
+    margin: 10px 10px 10px 14px;
+  }
+
+  input {
+    position: absolute;
+    cursor: pointer;
+    width: 0;
+  }
+
+  &__checked {
+    position: absolute;
+    left: 137px;
+    height: 20px;
+    width: 20px;
+    background-color:transparent;
+    border: 2px solid #333333;
+    border-radius: 50px;
   }
 }
 
-  //Tablet:
-  @media (max-width:1024px),(max-width:768px){
-      .checkboxContainer{
-          margin: 10px 0 78px 40px;
-      }
+.checkboxContainer__container:hover input~.checkboxContainer__checked {
+  background: #f8f8f8;
+}
+
+.checkboxContainer__container input:checked~.checkboxContainer__checked {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkboxContainer__checked:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer__container input:checked~.checkboxContainer__checked:after {
+  display: block;
+}
+
+
+/* Style the checkmark/indicator */
+.checkboxContainer__container .checkboxContainer__checked:after {
+  left: 2px;
+  top: 2.3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #333333;
+}
+
+//Tablet:
+@media (max-width:1024px),
+(max-width:768px) {
+  .checkboxContainer {
+    margin: 10px 0 100px 40px;
   }
+
+  .checkboxContainer__checked {
+    position: absolute;
+    left: 40px;
+  }
+}
+
+
+.btnsWrapper{
+  margin-top: 20px;
+}

@@ -8,7 +8,7 @@ import CheckBoxesRender from './CheckBoxesRender';
 const setUp = (props={}) => {
     const component = shallow(<CheckBoxesRender {...props}/>);
     return component;
-}
+};
 
 describe('CheckBoxBluePrint component',() => {
     describe('Checking PropTypes', () => {
@@ -32,5 +32,5 @@ describe('CheckBoxBluePrint component',() => {
     it('renders expected snapshot', () => {
         const wrapper = component;
         expect(toJson(wrapper)).toMatchSnapshot();
-    })
-})
+    });
+});

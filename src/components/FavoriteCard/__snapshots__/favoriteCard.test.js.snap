@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JokeCard component card renders expected snapshot 1`] = `
+exports[`favorite card component renders snapshot without favorite jokes 1`] = `
 <ContextProvider
   value={
     Object {
@@ -32,14 +32,6 @@ exports[`JokeCard component card renders expected snapshot 1`] = `
     }
   }
 >
-  <JokeCard
-    category={
-      Array [
-        "animal",
-      ]
-    }
-    id="kv95RRh0SCie8_8q4B7hRA"
-    joke="The sun doesnt shine on Chuck Norris. If it did well you know when a solar eclipse is coming."
-  />
+  <FavoriteCardBluePrint />
 </ContextProvider>
 `;

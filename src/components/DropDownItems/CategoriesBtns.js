@@ -1,49 +1,31 @@
-import React/*,{useState}*/ from 'react';
-import {useDispatch} from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import {setCategory} from '../../actions/index';
+import { setCategory } from '../../actions';
 import './dropDownStyles.scss';
 
-
-
 export const CategoriesBtns = () => {
-   //LATER: const [activeBtn,setActiveBtn] = useState(false);
-
     const dispatch = useDispatch();
+    const category = useSelector(state => state.jokeCategoryToSearch);
 
+    useEffect(() => {
+        dispatch(setCategory('animal'));
+    }, []);
 
-    const setJokeCategory = (e , value) => {
-        e.preventDefault();
-        if(value === 'animal'){
-            document.querySelector('.animal').style.background = '#F8F8F8';
-            document.querySelector('.animal').style.color = 'black';
-        }else if(value === 'career'){
-            document.querySelector('.career').style.background = '#F8F8F8';
-            document.querySelector('.career').style.color = 'black';
-        }else if(value === 'celebrity'){
-            document.querySelector('.celebrity').style.background = '#F8F8F8';
-            document.querySelector('.celebrity').style.color = 'black';
-        }else if (value === 'dev'){
-            document.querySelector('.dev').style.background = '#F8F8F8';
-            document.querySelector('.dev').style.color = 'black';
-        };
-        dispatch(setCategory(value));
-    }
-
-    return(
+    return (
         <div className="btnContainer">
-            <button 
-            className={'btnContainer__btn animal '} 
-            onClick={e => setJokeCategory(e, 'animal')}>animal</button>
-            <button 
-            className={`btnContainer__btn career`} 
-            onClick={e => setJokeCategory(e, 'career')}>career</button>
-            <button 
-            className={`btnContainer__btn celebrity`} 
-            onClick={e => setJokeCategory(e, 'celebrity')}>celebrity</button>
-            <button 
-            className={`btnContainer__btn dev`} 
-            onClick={e => setJokeCategory(e, 'dev')}>dev</button>
+            <button
+                className={`btnContainer__btn animal ${category === 'animal' && 'active'}`}
+                onClick={() => dispatch(setCategory('animal'))}>animal</button>
+            <button
+                className={`btnContainer__btn career ${category === 'career' && 'active'}`}
+                onClick={() => dispatch(setCategory('career'))}>career</button>
+            <button
+                className={`btnContainer__btn celebrity ${category === 'celebrity' && 'active'}`}
+                onClick={() => dispatch(setCategory('celebrity'))}>celebrity</button>
+            <button
+                className={`btnContainer__btn dev ${category === 'dev' && 'active'}`}
+                onClick={() => dispatch(setCategory('dev'))}>dev</button>
         </div>
     );
 };

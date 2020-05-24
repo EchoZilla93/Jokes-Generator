@@ -109,7 +109,7 @@ $primaryColor:#F8F8F8;
   }
 .btnContainer{
     @include flex-row();
-    margin: 26px 0 26px -5px;
+    margin: 26px 0 26px -99px;
     width: 380px;
     height: 2px;
     text-transform: uppercase;
@@ -150,6 +150,7 @@ $primaryColor:#F8F8F8;
       min-width: 680px;
       border-radius: 10px;
       border: solid 2px black;
+      margin: -15px 0 0 0;
       font-size: 16px;
       animation: bounceIn .8s;
   

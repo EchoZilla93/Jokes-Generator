@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { useDispatch } from 'react-redux';
 import '../App.scss';
-import { initFavoriteJokes, removeFavorite } from '../actions'
+import { initFavoriteJokes} from '../actions'
 
-import MainContent from './windows/MainContent';
-import FavoriteContent from './windows/FavoriteContent';
+import MainSection from './sections/MainSection';
+import SectionFavorite from './sections/SectionFavorite';
+import FavoriteSectionBtn from './FavoriteSectionBtn/FavoriteSectionBtn';
 
 const App = () => {
+  const [favoriteSectionVisible, setFavoriteSectionVisible] = useState(false);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,18 +17,24 @@ const App = () => {
     if (jokes) {
       dispatch(initFavoriteJokes(jokes));
     }
-    // dispatch(removeFavorite("cwguxfhptcuagndjdt1hya"));
   }, []);
 
+  const handleFavoriteBtnClick = () => {
+    setFavoriteSectionVisible(!favoriteSectionVisible);
+	};
+
   return (
-    <div>
-      <div className="wrapper">
-        <MainContent />
+    <div className="app">
+        <MainSection className={`${favoriteSectionVisible? 'stopEvents' : ''}`}/>
+      <FavoriteSectionBtn
+					onFavoriteBtnClick={handleFavoriteBtnClick}
+					favoriteSectionVisible={favoriteSectionVisible}
+				/>
+        <SectionFavorite
+        isVisible={favoriteSectionVisible}
+        onFavoriteBtnClick={handleFavoriteBtnClick} 
+        favoriteSectionVisible={favoriteSectionVisible}/>
       </div>
-      <div className="wrapperfav">
-        <FavoriteContent />
-      </div>
-    </div>
   )
 }
 export default App;

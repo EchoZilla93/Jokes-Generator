@@ -1,21 +1,26 @@
-.getJokeBtnContainer{
-    position: relative;
-    top: -40px;
-    margin: 20px 0 0 140px;
-    &__item{
-      width: 152px;
-      height: 42px;
-      border-radius:10px;
-      background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
-      outline:none;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.getJokeBtnContainer {
+  position: relative;
+  top: -40px;
+  margin: 20px 0 0 140px;
+
+  &__item {
+    border:none;
+    outline: none;
+    width: 152px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
   }
-  //TABLET
-  @media (max-width:1024px),(max-width:768px){
-    .getJokeBtnContainer{
-      margin: -20px 0 0 40px;
-    }
-  } 
+}
+
+//TABLET
+@media (max-width:1024px),
+(max-width:768px) {
+  .getJokeBtnContainer {
+    margin: -20px 0 0 40px;
+  }
+}

@@ -1,0 +1,49 @@
+.favorite-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.favorite-btn--favorite-section-visible {
+		opacity: 0;
+	}
+}
+
+.favorite-btn {
+	position: absolute;
+	right: 35px;
+	margin-top: 35px;
+	height: fit-content;
+	justify-content: space-between;
+	width: 122px;
+	cursor: pointer;
+	font-weight: 500;
+	display: none;
+
+	.favorite-btn__icon-group {
+		width: 28px;
+		height: 28px;
+		background: #333;
+		color: #fff;
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: transform 0.5s;
+		z-index: 10;
+
+	}
+
+	.favorite-btn__text {
+		font-size: 20px;
+		line-height: 28px;
+		color: #ababab;
+		z-index: 10;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 1439px) {
+	.favorite-btn {
+		display: flex;
+	}
+}

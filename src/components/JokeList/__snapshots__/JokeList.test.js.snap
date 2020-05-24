@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component renders component with jokes 1`] = `
+<Fragment>
+  <JokeCard
+    category={
+      Array [
+        "animal",
+      ]
+    }
+    id="kv95RRh0SCie8_8q4B7hRA"
+    joke="The sun doesnt shine on Chuck Norris. If it did well you know when a solar eclipse is coming."
+    key="kv95RRh0SCie8_8q4B7hRA"
+    updatedAt="2020-01-05 13:42:20.568859"
+    url="https://api.chucknorris.io/jokes/kv95RRh0SCie8_8q4B7hRA"
+  />
+</Fragment>
+`;
+
+exports[`component renders component without jokes 1`] = `<Fragment />`;

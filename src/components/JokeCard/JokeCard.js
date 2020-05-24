@@ -1,30 +1,40 @@
-import React,{useState} from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import './jokeCardStyles.scss';
-import { addFavorite } from '../../actions';
+import { addFavorite, removeFavorite } from '../../actions';
+import { checkIfLiked } from '../../localStorage'
 
 export const JokeCard = props => {
-    const [favStatus,setFavStatus] = useState(false);
     const dispatch = useDispatch();
-    const favoriteClick = () =>{
-        setFavStatus(!favStatus);
-        if(favStatus){
-            document.getElementById('icon').classList.add('far');
-            document.getElementById('icon').classList.add('fa-heart');
-        }else{
-            document.getElementById('icon').classList.add('fas');
-            document.getElementById('icon').classList.add('fa-heart');
+    const [like, setLike] = useState(checkIfLiked(props.id));
+    const favoriteJokes = useSelector(state => state.jokes.favoriteJokes);
+
+    const setJoke = () => {
+        if (like) {
+            setLike(false)
+            dispatch(removeFavorite(props.id));
+        } else {
+            setLike(true)
+            dispatch(addFavorite(props.id));
+        };
+    };
+
+    useEffect(() => {
+        if (!checkIfLiked(props.id)) {
+            setLike(false);
         }
-    }
+
+    }, [favoriteJokes])
+
     return (
-        <div className="jokeCardContainer">'
+        <div className="jokeCardContainer">
             <div className="jokeCardContainer__icons">
                 <div className="jokeCardContainer__static"><i className="far fa-comment-dots"></i></div>
-                <button onClick={() => dispatch(addFavorite(props.id))}
+                <button onClick={setJoke}
                     className="jokeCardContainer__likeBtn">
-                    <i onClick={favoriteClick} className="far fa-heart" id="icon"></i>
+                    <i className={`${like ? 'fas' : 'far'} fa-heart`} id="icon"></i>
                 </button>
             </div>
             <div className="jokeCardContainer__bodyContainer">
@@ -50,7 +60,7 @@ export const JokeCard = props => {
 JokeCard.propTypes = {
     id: PropTypes.string.isRequired,
     joke: PropTypes.string.isRequired,
-    update: PropTypes.number,
+    updatedAt: PropTypes.string,
     category: PropTypes.array.isRequired,
     favorite: PropTypes.bool
 };

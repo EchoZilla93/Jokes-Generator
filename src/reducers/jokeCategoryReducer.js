@@ -1,8 +1,10 @@
-export default (state = 'random',action) => {
-    switch(action.type){
+export const category = (state = 'random', action) => {
+    switch (action.type) {
         case 'SET_CATEGORY':
-            return action.payload;          
+            return action.payload;
         default:
-            return state;   
+            return state;
     };
 };
+
+export default category

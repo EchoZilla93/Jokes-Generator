@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`windows content favoritewindow renders expect snapshot 1`] = `
+<div
+  className="favorite-container"
+>
+  <div
+    className="favorite-section "
+  >
+    <span>
+      Favorite
+    </span>
+    <FavoriteCardBluePrint />
+  </div>
+</div>
+`;
+
+exports[`windows content mainwindow renders expect snapshot 1`] = `
+<div
+  className="wrapper"
+>
+  <Head />
+  <CheckBoxRender />
+  <div
+    className="getJokeBtnContainer"
+  >
+    <GetJokeBtn />
+    <JokeList />
+  </div>
+</div>
+`;

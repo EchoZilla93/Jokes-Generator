@@ -14,8 +14,16 @@ export const getFavoriteJokes = () => {
 };
 
 export const removeFavoriteJoke = jokeToRemove => {
-    var jokes = JSON.parse(localStorage.getItem('favoriteJokes'));
-    var result = jokes.filter(joke => joke.id !== jokeToRemove.id);
-    console.log(result);
+    let jokes = JSON.parse(localStorage.getItem('favoriteJokes'));
+    let result = jokes.filter(joke => joke.id !== jokeToRemove.id);
     localStorage.setItem('favoriteJokes', JSON.stringify(result));
+}
+
+export const checkIfLiked = id => {
+    let jokes = JSON.parse(localStorage.getItem('favoriteJokes'));
+    if (jokes) {
+        let result = jokes.find(joke => joke.id === id);
+        if (result) return true;
+        else return false;
+    } else return false;
 }

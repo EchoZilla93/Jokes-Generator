@@ -11,7 +11,6 @@ export const CheckBoxRender = () => {
     };
     
     return(
-        <div>
             <div className="checkboxContainer">
                 {checkboxes.map(checkBox => (
                     <CheckBoxBluePrint
@@ -23,8 +22,7 @@ export const CheckBoxRender = () => {
                     />
                 ))}
             </div>
-        </div>
-    )
-}
+    );
+};
 
 export default CheckBoxRender;

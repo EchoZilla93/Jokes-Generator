@@ -1,37 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckBoxBluePrint component renders expected snapshot 1`] = `
-<div>
-  <div
-    className="checkboxContainer"
-  >
-    <CheckBoxBluePrint
-      className="checkboxContainer__form-item"
-      id={1}
-      key="1"
-      onSelect={[Function]}
-      selectedId={1}
-      type="radio"
-      value="Random"
-    />
-    <CheckBoxBluePrint
-      className="checkboxContainer__form-item"
-      id={2}
-      key="2"
-      onSelect={[Function]}
-      selectedId={1}
-      type="radio"
-      value="Category"
-    />
-    <CheckBoxBluePrint
-      className="checkboxContainer__form-item"
-      id={3}
-      key="3"
-      onSelect={[Function]}
-      selectedId={1}
-      type="radio"
-      value="Search"
-    />
-  </div>
+<div
+  className="checkboxContainer"
+>
+  <CheckBoxBluePrint
+    className="checkboxContainer__form-item"
+    id={1}
+    key="1"
+    onSelect={[Function]}
+    selectedId={1}
+    type="radio"
+    value="Random"
+  />
+  <CheckBoxBluePrint
+    className="checkboxContainer__form-item"
+    id={2}
+    key="2"
+    onSelect={[Function]}
+    selectedId={1}
+    type="radio"
+    value="Category"
+  />
+  <CheckBoxBluePrint
+    className="checkboxContainer__form-item"
+    id={3}
+    key="3"
+    onSelect={[Function]}
+    selectedId={1}
+    type="radio"
+    value="Search"
+  />
 </div>
 `;
